@@ -1,0 +1,34 @@
+
+Model Evaluation Metrics for SVD-based Collaborative Filtering
+=============================================================
+
+Best Hyperparameters (after Grid Search):
+----------------------------------------
+- n_factors: 10
+- n_epochs: 20
+- lr_all: 0.002
+- reg_all: 0.1
+
+Model Performance:
+-------------------
+- Mean Absolute Error (MAE): 0.0206
+- Mean Squared Error (MSE): 0.0319
+- Root Mean Squared Error (RMSE): 0.1787
+
+Training Dataset:
+-----------------
+- Number of Users: 87,723
+- Number of Items: 50,084
+- Number of Interactions: 100,000 (Sampled Data)
+
+Test Dataset:
+-------------
+- Number of Users: 87,723 (same as train due to splitting)
+- Number of Items: 50,084
+- Number of Interactions: 20,000 (Test set)
+
+Model Summary:
+--------------
+- The recommendation system is based on matrix factorization using Singular Value Decomposition (SVD).
+- GridSearchCV was used to tune hyperparameters to achieve the best RMSE.
+- The final model performed with an RMSE of 0.1787, indicating strong predictive performance for user-item interaction prediction.
